@@ -11,7 +11,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # Enable CORS for your frontend
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "https://flower-boutique-iota.vercel.app"}})
 
 # MongoDB connection
 client = MongoClient(os.getenv("MONGO_URL"), tlsCAFile=certifi.where())
